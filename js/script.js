@@ -40,18 +40,35 @@ createApp({
     methods : {
 
         buttonUp(){
-            alert('cliccato');
+
+
+            if (this.activeIndex > 0) {
+            this.activeIndex --;
+            }
+            else{
+                this.activeIndex = this.slides.length - 1;
+            }
+
+            // alert('cliccato');
             
         },
 
         buttonDown(){
-            alert('cliccato');
+
+            if (this.activeIndex < this.slides.length - 1) {
+                this.activeIndex ++;
+                }
+                else{
+                    this.activeIndex = 0;
+                }
+
+            // alert('cliccato');
         },
 
-        checkIndex() {
+        // checkIndex() {
 
-            return (this.activeIndex == 0 ? 'd_block' : 'd_none');
-        }
+        //     return (this.activeIndex == 0 ? 'd_block' : 'd_none');
+        // }
 
     }
 
